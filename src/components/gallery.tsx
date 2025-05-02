@@ -5,6 +5,9 @@ const imageList = [
   "/assets/screen_image/screen4.webp",
   "/assets/screen_image/screen5.webp",
   "/assets/screen_image/screen6.webp",
+  "/assets/screen_image/screen7.webp",
+  "/assets/screen_image/screen8.webp",
+  "/assets/screen_image/screen9.webp",
 ];
 
 export default function HorizontalGallery() {
