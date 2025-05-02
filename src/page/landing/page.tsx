@@ -6,7 +6,12 @@ import HorizontalGallery from "@/components/gallery";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-zinc-100 text-zinc-800">
+    <div
+      style={{
+        background: "linear-gradient(135deg, #FFD2D2 0%, #B3E1B0 100%)"
+      }}
+      className="min-h-screen text-zinc-800"
+    >
       {/* Hero */}
       <motion.section
         className="text-center pt-16 pb-8 px-4 max-w-7xl mx-auto"
@@ -43,7 +48,7 @@ export default function LandingPage() {
 
       {/* Overview */}
       <motion.section
-        className="py-16 px-4 bg-zinc-50 max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-10 md:gap-20"
+        className="py-16 px-4 max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-10 md:gap-20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -67,7 +72,7 @@ export default function LandingPage() {
 
       {/* Features */}
       <motion.section
-        className="py-16 px-4 bg-white max-w-7xl mx-auto"
+        className="py-16 px-4 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -102,7 +107,7 @@ export default function LandingPage() {
               transition={{ delay: i * 0.2, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Card className="shadow-sm">
+              <Card className="shadow-sm bg-white">
                 <CardContent className="py-8 text-center">
                   {item.icon}
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -116,21 +121,21 @@ export default function LandingPage() {
 
       {/* Demo Section with Horizontal Gallery */}
       <motion.section
-        className="py-20 px-4 bg-zinc-50 max-w-7xl mx-auto text-center"
+        className="py-20 px-4 max-w-7xl mx-auto text-center"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
         <h2 className="text-2xl sm:text-3xl font-bold mb-6">앱 미리보기</h2>
-        <section className="bg-white py-12">
+        <section className="py-12">
           <HorizontalGallery />
         </section>
       </motion.section>
 
       {/* 팀 소개 */}
       <motion.section
-        className="px-6 md:px-24 py-16 bg-white text-left"
+        className="px-6 md:px-24 py-16 text-left"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.7 }}
