@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Users, Share2, Github } from "lucide-react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 import HorizontalGallery from "@/components/gallery";
 
 export default function LandingPage() {
   return (
     <div
       style={{
-        background: "linear-gradient(135deg, #666666 0%, #000000 100%)"
+        background: "linear-gradient(135deg, #666666 0%, #000000 100%)",
       }}
       className="min-h-screen text-white"
     >
@@ -24,7 +25,8 @@ export default function LandingPage() {
           Dan Mu Zi
         </motion.h1>
         <motion.p className="text-base sm:text-md text-white max-w-2xl mx-auto mb-12">
-          AI와 함께하는 여행 <br />단체사진을 쉽고 즐겁게, 순간을 온전히 담다
+          AI와 함께하는 여행 <br />
+          단체사진을 쉽고 즐겁게, 순간을 온전히 담다
         </motion.p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <a
@@ -33,7 +35,9 @@ export default function LandingPage() {
             rel="noopener noreferrer"
           >
             <Button
-              className="px-6 py-3 text-lg"
+              className={cn(
+                "px-6 py-3 text-lg bg-transparent text-gray- border-gray-400"
+              )}
               variant="outline"
               onClick={() => {
                 window.open("https://github.com/Dan-Mu-Zi-Project");
@@ -72,16 +76,33 @@ export default function LandingPage() {
       >
         {/* 왼쪽: 제목 및 서브텍스트 (세로 가운데 정렬) */}
         <div className="w-full md:w-1/3 flex flex-col justify-center items-start md:items-start text-left">
-          <h2 className="text-6xl font-extrabold text-white mb-2 pl-2 md:pl-0">Overview</h2>
+          <h2 className="text-6xl font-extrabold text-white mb-2 pl-2 md:pl-0">
+            Overview
+          </h2>
         </div>
         {/* 오른쪽: 본문 내용 */}
         <div className="w-full md:w-2/3 text-xs sm:text-sm text-white leading-relaxed">
-          카메라는 늘 기록을 위한 도구로 여겨져 왔습니다. 그러나 우리는 묻습니다. <br />
-          왜 카메라는 단순한 촬영 도구여야 할까? <br /><br />
-          <b>단무지</b>는 그 질문에서 출발한 단체 여행 특화 앱입니다. 단무지는 단순히 사진을 잘 찍어주는 AI가 아니라, 사용자와 ‘함께 여행하는 존재’로 기획되었습니다. 사람의 얼굴을 인식하고, 적절한 구도를 제안하며, 대화를 통해 자연스러운 순간을 이끌어내는 단무지는, 마치 여행을 함께하는 친구처럼 사용자에게 반응합니다.<br /><br />
-          단무지는 촬영 과정 그 자체를 하나의 인터랙티브한 경험으로 만들어, 여행의 순간마다 이야기와 몰입이 생겨나도록 설계되었습니다. 또한, 촬영 이후에는 AI가 사진을 자동 정리·선별해 사용자가 사진 관리에 시간을 들이지 않고, 여행에 더욱 집중할 수 있게 돕습니다.<br /><br />
-          우리는 단무지를 통해 여행의 자유로움을 확장하며, <b>‘카메라와의 교감’</b>이라는 새로운 경험을 제안합니다. <br />
-          사진은 더 이상 결과물이 아닌, 함께하는 순간에 더 깊이 몰입할 수 있는 이야기의 일부가 됩니다.
+          카메라는 늘 기록을 위한 도구로 여겨져 왔습니다. 그러나 우리는
+          묻습니다. <br />
+          왜 카메라는 단순한 촬영 도구여야 할까? <br />
+          <br />
+          <b>단무지</b>는 그 질문에서 출발한 단체 여행 특화 앱입니다. 단무지는
+          단순히 사진을 잘 찍어주는 AI가 아니라, 사용자와 ‘함께 여행하는 존재’로
+          기획되었습니다. 사람의 얼굴을 인식하고, 적절한 구도를 제안하며, 대화를
+          통해 자연스러운 순간을 이끌어내는 단무지는, 마치 여행을 함께하는
+          친구처럼 사용자에게 반응합니다.
+          <br />
+          <br />
+          단무지는 촬영 과정 그 자체를 하나의 인터랙티브한 경험으로 만들어,
+          여행의 순간마다 이야기와 몰입이 생겨나도록 설계되었습니다. 또한, 촬영
+          이후에는 AI가 사진을 자동 정리·선별해 사용자가 사진 관리에 시간을
+          들이지 않고, 여행에 더욱 집중할 수 있게 돕습니다.
+          <br />
+          <br />
+          우리는 단무지를 통해 여행의 자유로움을 확장하며,{" "}
+          <b>‘카메라와의 교감’</b>이라는 새로운 경험을 제안합니다. <br />
+          사진은 더 이상 결과물이 아닌, 함께하는 순간에 더 깊이 몰입할 수 있는
+          이야기의 일부가 됩니다.
         </div>
       </motion.section>
 
@@ -95,9 +116,15 @@ export default function LandingPage() {
       >
         {/* 타이틀 및 서브텍스트 추가 */}
         <div className="mb-16 mt-12 text-left leading-relaxed">
-          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-6">여행의 순간을</h2>
-          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-8">방해하지 않는 AI</h2>
-          <span className="text-base text-gray-400 leading-[1.0] mb-2 block">사용자는 여행에만 집중하세요. 나머지는 무지가 알아서 할게요.</span>
+          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-6">
+            여행의 순간을
+          </h2>
+          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-8">
+            방해하지 않는 AI
+          </h2>
+          <span className="text-base text-gray-400 leading-[1.0] mb-2 block">
+            사용자는 여행에만 집중하세요. 나머지는 무지가 알아서 할게요.
+          </span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
           {[
@@ -131,7 +158,9 @@ export default function LandingPage() {
               <Card className="shadow-sm bg-[#222] border border-white/50">
                 <CardContent className="py-8 text-center">
                   {item.icon}
-                  <h3 className="text-xl font-semibold mb-2 text-white">{item.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    {item.title}
+                  </h3>
                   <p className="text-sm text-white">{item.desc}</p>
                 </CardContent>
               </Card>
@@ -150,9 +179,15 @@ export default function LandingPage() {
       >
         {/* 타이틀 및 서브텍스트 오른쪽 정렬로 변경 */}
         <div className="mb-16 mt-12 text-right leading-relaxed">
-          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-6">단무지와 함께하는</h2>
-          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-8">자유로운 여행의 흐름</h2>
-          <span className="text-base text-gray-400 leading-[1.0] mb-4 block">손에 쥔 것은 카메라지만, 기억하는 것은 순간입니다.</span>
+          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-6">
+            단무지와 함께하는
+          </h2>
+          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-8">
+            자유로운 여행의 흐름
+          </h2>
+          <span className="text-base text-gray-400 leading-[1.0] mb-4 block">
+            손에 쥔 것은 카메라지만, 기억하는 것은 순간입니다.
+          </span>
         </div>
         <section className="py-2">
           <HorizontalGallery />
@@ -167,25 +202,57 @@ export default function LandingPage() {
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl md:text-5xl mb-20 font-extrabold mb-8 text-white">Team. 단무지</h2>
-        <div className="flex justify-center gap-8 mb-8">
+        <h2 className="text-4xl md:text-5xl mb-20 font-extrabold mb-8 text-white">
+          Team. 단무지
+        </h2>
+        <div className="flex max-sm:justify-start justify-center gap-8 mb-8 overflow-x-auto">
           <div className="flex flex-col items-center">
-            <img src="/assets/profile/profile1.jpeg" alt="profile1" className="h-auto w-auto max-w-[20rem] max-h-[20rem]" />
-            <span className="mt-4 text-lg font-semibold text-white">WooJin Byeon</span>
-            <span className="mt-3 text-sm text-gray-400">bwj0721@soongsil.ac.kr</span>
-            <span className="mt-1 text-sm text-gray-400">Soongsil GlobalMedia 21</span>
+            <img
+              src="/assets/profile/profile1.jpeg"
+              alt="profile1"
+              className="h-auto w-auto max-w-[20rem] max-h-[20rem]"
+            />
+            <span className="mt-4 text-lg font-semibold text-white">
+              WooJin Byeon
+            </span>
+            <span className="mt-3 text-sm text-gray-400">
+              bwj0721@soongsil.ac.kr
+            </span>
+            <span className="mt-1 text-sm text-gray-400">
+              Soongsil GlobalMedia 21
+            </span>
           </div>
           <div className="flex flex-col items-center">
-            <img src="/assets/profile/profile2.JPG" alt="profile2" className="h-auto w-auto max-w-[20rem] max-h-[20rem]" />
-            <span className="mt-4 text-lg font-semibold text-white">HyeRyoung Kim</span>
-            <span className="mt-3 text-sm text-gray-400">hyeryoung27@soongsil.ac.kr</span>
-            <span className="mt-1 text-sm text-gray-400">Soongsil GlobalMedia 21</span>
+            <img
+              src="/assets/profile/profile2.JPG"
+              alt="profile2"
+              className="h-auto w-auto max-w-[20rem] max-h-[20rem]"
+            />
+            <span className="mt-4 text-lg font-semibold text-white">
+              HyeRyoung Kim
+            </span>
+            <span className="mt-3 text-sm text-gray-400">
+              hyeryoung27@soongsil.ac.kr
+            </span>
+            <span className="mt-1 text-sm text-gray-400">
+              Soongsil GlobalMedia 21
+            </span>
           </div>
           <div className="flex flex-col items-center">
-            <img src="/assets/profile/profile3.JPG" alt="profile3" className="h-auto w-auto max-w-[20rem] max-h-[20rem]" />
-            <span className="mt-4 text-lg font-semibold text-white">JaeHwan Shim</span>
-            <span className="mt-3 text-sm text-gray-400">troyshim@soongsil.ac.kr</span>
-            <span className="mt-1 text-sm text-gray-400">Soongsil GlobalMedia 21</span>
+            <img
+              src="/assets/profile/profile3.JPG"
+              alt="profile3"
+              className="h-auto w-auto max-w-[20rem] max-h-[20rem]"
+            />
+            <span className="mt-4 text-lg font-semibold text-white">
+              JaeHwan Shim
+            </span>
+            <span className="mt-3 text-sm text-gray-400">
+              troyshim@soongsil.ac.kr
+            </span>
+            <span className="mt-1 text-sm text-gray-400">
+              Soongsil GlobalMedia 21
+            </span>
           </div>
         </div>
       </motion.section>
