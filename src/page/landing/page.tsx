@@ -15,7 +15,7 @@ export default function LandingPage() {
     >
       {/* Hero */}
       <motion.section
-        className="text-center pt-24 pb-8 px-4 max-w-7xl mx-auto"
+        className="text-center pt-24 pb-8 px-6 md:px-4 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -24,7 +24,7 @@ export default function LandingPage() {
         <motion.h1 className="text-6xl sm:text-7xl font-extrabold tracking-tight mb-10 text-white">
           Dan Mu Zi
         </motion.h1>
-        <motion.p className="text-base sm:text-md text-white max-w-2xl mx-auto mb-12">
+        <motion.p className="text-base sm:text-md text-white max-w-2xl mx-auto mb-6">
           AI와 함께하는 여행 <br />
           단체사진을 쉽고 즐겁게, 순간을 온전히 담다
         </motion.p>
@@ -68,7 +68,7 @@ export default function LandingPage() {
 
       {/* Overview */}
       <motion.section
-        className="py-32 px-4 max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-10 md:gap-20 mt-16"
+        className="py-32 px-6 md:px-4 max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-10 md:gap-20 mt-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -108,7 +108,7 @@ export default function LandingPage() {
 
       {/* Features */}
       <motion.section
-        className="py-32 px-4 max-w-7xl mx-auto"
+        className="py-32 px-6 md:px-4 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -116,13 +116,13 @@ export default function LandingPage() {
       >
         {/* 타이틀 및 서브텍스트 추가 */}
         <div className="mb-16 mt-12 text-left leading-relaxed">
-          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-[1.0] mb-6">
             여행의 순간을
           </h2>
-          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-8">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-[1.0] mb-8">
             방해하지 않는 AI
           </h2>
-          <span className="text-base text-gray-400 leading-[1.0] mb-2 block">
+          <span className="text-xs md:text-base text-gray-400 leading-[1.0] mb-2 block">
             사용자는 여행에만 집중하세요. 나머지는 무지가 알아서 할게요.
           </span>
         </div>
@@ -133,19 +133,19 @@ export default function LandingPage() {
                 <Sparkles className="mx-auto mb-4 w-10 h-10 text-indigo-500" />
               ),
               title: "AI 기반 음성 피드백",
-              desc: "최적의 구도와 촬영 상태를 실시간으로 안내해요",
+              desc: "최적의 구도와 촬영 상태를 실시간으로 안내해요.",
             },
             {
               icon: <Users className="mx-auto mb-4 w-10 h-10 text-pink-500" />,
-              title: "함께 기록",
-              desc: "지인들과 함께 그룹을 만들고 사진을 관리해보세요.",
+              title: "단체사진 촬영 특화 기능",
+              desc: "모두 최적인 상태를 캐치해서 무지가 사진을 찍어줘요.",
             },
             {
               icon: (
                 <Share2 className="mx-auto mb-4 w-10 h-10 text-green-500" />
               ),
-              title: "간편 공유",
-              desc: "촬영된 사진은 SNS나 메시지로 바로 공유할 수 있어요.",
+              title: "사진 관리의 혁신",
+              desc: "내 사진은 내게, 친구의 사진은 친구에게. AI가 알아서 정리해요.",
             },
           ].map((item, i) => (
             <motion.div
@@ -155,8 +155,8 @@ export default function LandingPage() {
               transition={{ delay: i * 0.2, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Card className="shadow-sm bg-[#222] border border-white/50">
-                <CardContent className="py-8 text-center">
+              <Card className="shadow-sm bg-[#222] border border-black h-64">
+                <CardContent className="py-8 text-center h-full flex flex-col justify-center">
                   {item.icon}
                   <h3 className="text-xl font-semibold mb-2 text-white">
                     {item.title}
@@ -171,7 +171,7 @@ export default function LandingPage() {
 
       {/* Demo Section with Horizontal Gallery */}
       <motion.section
-        className="py-20 px-4 max-w-7xl mx-auto text-center"
+        className="py-20 px-6 md:px-4 max-w-7xl mx-auto text-center"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -179,13 +179,13 @@ export default function LandingPage() {
       >
         {/* 타이틀 및 서브텍스트 오른쪽 정렬로 변경 */}
         <div className="mb-16 mt-12 text-right leading-relaxed">
-          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-[1.0] mb-6">
             단무지와 함께하는
           </h2>
-          <h2 className="text-5xl font-extrabold text-white leading-[1.0] mb-8">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-[1.0] mb-8">
             자유로운 여행의 흐름
           </h2>
-          <span className="text-base text-gray-400 leading-[1.0] mb-4 block">
+          <span className="text-xs md:text-base text-gray-400 leading-[1.0] mb-4 block">
             손에 쥔 것은 카메라지만, 기억하는 것은 순간입니다.
           </span>
         </div>
