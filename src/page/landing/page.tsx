@@ -184,7 +184,7 @@ export default function LandingPage() {
           <div className="flex flex-col items-center">
             <img src="/assets/profile/profile3.JPG" alt="profile3" className="h-auto w-auto max-w-[20rem] max-h-[20rem]" />
             <span className="mt-4 text-lg font-semibold text-white">JaeHwan Shim</span>
-            <span className="mt-3 text-sm text-gray-400">bwj0721@soongsil.ac.kr</span>
+            <span className="mt-3 text-sm text-gray-400">troyshim@soongsil.ac.kr</span>
             <span className="mt-1 text-sm text-gray-400">Soongsil GlobalMedia 21</span>
           </div>
         </div>
