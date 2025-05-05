@@ -205,7 +205,7 @@ export default function LandingPage() {
         <h2 className="text-4xl md:text-5xl mb-20 font-extrabold mb-8 text-white">
           Team. 단무지
         </h2>
-        <div className="flex max-sm:justify-start justify-center gap-8 mb-8 overflow-x-auto">
+        <div className="flex max-sm:justify-start justify-center gap-8 mb-8 scrollbar-hide overflow-x-auto">
           <div className="flex flex-col items-center">
             <img
               src="/assets/profile/profile1.jpeg"
